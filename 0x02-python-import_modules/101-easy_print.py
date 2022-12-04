@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import print_check_101
+__import__('os').system("echo '#pythoniscool'")

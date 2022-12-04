@@ -1,22 +1,21 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import sys
+    from sys import argv
     from calculator_1 import add, sub, mul, div
-    if (len(sys.argv) != 4):
+    if len(argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        sys.exit(1)
+        exit(1)
     else:
-        a = int(sys.argv[1])
-        b = int(sys.argv[3])
-        op = sys.argv[2]
-        if op == '+':
-            print("{} {} {} = {}".format(a, op, b, add(a, b)))
-        elif op == '-':
-            print("{} {} {} = {}".format(a, op, b, sub(a, b)))
-        elif op == '*':
-            print("{} {} {} = {}".format(a, op, b, mul(a, b)))
-        elif op == '/':
-            print("{} {} {} = {}".format(a, op, b, div(a, b)))
+        uno = int(argv[1])
+        dos = int(argv[3])
+        if argv[2] == '+':
+            print("{:d} + {:d} = {:d}".format(uno, dos, add(uno, dos)))
+        elif argv[2] == '-':
+            print("{:d} - {:d} = {:d}".format(uno, dos, sub(uno, dos)))
+        elif argv[2] == '*':
+            print("{:d} * {:d} = {:d}".format(uno, dos, mul(uno, dos)))
+        elif argv[2] == '/':
+            print("{:d} / {:d} = {:d}".format(uno, dos, div(uno, dos)))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
-            sys.exit(1)
+            exit(1)
