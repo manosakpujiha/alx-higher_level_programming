@@ -1,41 +1,15 @@
 #!/usr/bin/python3
-
-"""
-
-M0dule square
-
-Define class Square
-
-"""
-
-
-
+"""Creating a new class called Square"""
 
 
 class Square:
-
-    """ Defines a Class square object.
-
-    Private instance attribute: size.
-
-    """
-
-
-
+    """class Square that defines a square by: (based on 1-square.py)"""
     def __init__(self, size=0):
+        """Initialize Square with size attribute"""
+        self.__size = size
 
-        """ initialize the method square object
-
-        """
-
-        if not isinstance(size, int):
-
+        if type(size) is not int:
             raise TypeError("size must be an integer")
 
-        elif size < 0:
-
+        if size < 0:
             raise ValueError("size must be >= 0")
-
-        else:
-
-            self.__size = int(size)
