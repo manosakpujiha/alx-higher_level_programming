@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Module built for Python 0x07 advanced task 100. """
 
-
 def matrix_mul(m_a, m_b):
     """Function that performs matrix multiplication on two two-dimensional lists
     of integers/floats. Error checking and input filtration could be done more
